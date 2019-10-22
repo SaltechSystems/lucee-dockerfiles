@@ -1,0 +1,7 @@
+# CFWheels Rewrite Rules
+# Taken from github.com/chrisdpeters/lucee-docker
+if (!-f $request_filename)
+{
+  rewrite ^/(.*)$ /rewrite.cfm/$1 break;
+  break;
+}
